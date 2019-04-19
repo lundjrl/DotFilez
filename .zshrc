@@ -1,3 +1,9 @@
+#	       __
+# _____   ____/ /_
+#/_   / / ___/  __ \
+# /  /_(___ )  / / /
+#/____/____//_/ /_/
+#
 #List of aliases
 alias chrome="cd /Applications && open Google\ Chrome.app --args "https://github.com/BeeInformedPartnership/bip2" --app "http://localhost:3000/hive-scales-dev#/""
 alias eos="ssh lundj@eos02.cis.gvsu.edu"
@@ -5,10 +11,13 @@ alias wund="open -a Wunderlist"
 alias atom="open -a Atom"
 alias zilla="open -a FileZilla"
 alias vpn="sudo openconnect --juniper vpn.student.gvsu.edu"
+alias code="open -a VScode"
+alias messenger="open -a Messenger"
 
 export DEFAULT_USER="bidamin"
 export TERM="xterm-256color"
 export ZSH="/Users/bidamin/.oh-my-zsh"
+export PATH="$PATH:/optyarn-[1.15.2]/bin"
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
