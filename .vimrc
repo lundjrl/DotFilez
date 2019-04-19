@@ -16,7 +16,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'gilgigilgil/anderson.vim'
-"Plug 'vim-airline/vim-airline'
 call plug#end()
 
 "Key bindings
@@ -26,22 +25,14 @@ map <C-n> :NERDTreeToggle<CR>
 set number
 colorscheme anderson
 
-"Vim statusbar
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
-"Clearing complications
-set noruler
+"''''''Vim statusbar''''''"
 
 "Setting up the line
 set laststatus=2
 set statusline=
+
+"Clearing complications
+set noruler
 
 "Statusline config
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
