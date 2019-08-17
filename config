@@ -85,7 +85,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space+f focus mode_toggle
+bindsym $mod+pace+f focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -135,7 +135,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit 
+#"i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -182,26 +183,25 @@ bar {
 	}
 }
 
-#Apps opened in assigned workspaces
-for_window [class="^.*"] border pixel 0
-for_window [class="^chromium$"] floating enable border normal
-for_window [class="^spotify$"] floating enable border normal
-
 #Gaps related things
 gaps inner 8
-gaps outer 15
-smart_gaps on
+gaps outer 20
 bindsym $mod+m gaps outer current minus 15
 bindsym $mod+Shift+m gaps outer current plus 15
 
 #Rounded borders
 for_window [class=".*"] border pixel 4
 border_radius 6
+client.unfocused	#FF000000 #FF000000 #FF000000 #FF000000 #FF000000 #FF000000
+client.focused		#FF000000 #FF000000 #FF000000 #FF000000 #FF000000 #FF000000
+
+#Screenshots
+#bindsym Print exec scrot
 
 exec_always --no-startup-id feh --bg-fill -z ~/Pictures #/121415.jpg
 exec --no-startup-id compton
 exec --no-startup-id i3-msg 'workspace $ws1; exec i3-sensible-terminal' 
 exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
-#exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/virtualbox'
-exec --no-startup-id xautolock -time 5 -locker 'i3lock -d -c 000000'
-#exec --no-startup-id i3-msg 'workspace $ws4; exec /home/bmo/snap/spotify'
+exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/virtualbox'
+#exec --no-startup-id xautolock -time 5 -locker 'i3lock -d -c 000000'
+exec --no-startup-id i3-msg 'workspace $ws4; exec /home/bmo/snap/spotify'
