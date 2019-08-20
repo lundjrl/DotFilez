@@ -1,122 +1,83 @@
-#	       __
-# _____   ____/ /_
-#/_   / / ___/  __ \
-# /  /_(___ )  / / /
-#/____/____//_/ /_/
-#
-#List of aliases
-alias chrome="cd /Applications && open Google\ Chrome.app --args "https://github.com/BeeInformedPartnership/bip2" --app "http://localhost:3000/hive-scales-dev#/""
-alias eos="ssh lundj@eos02.cis.gvsu.edu"
-alias wund="open -a Wunderlist"
-alias atom="open -a Atom"
-alias zilla="open -a FileZilla"
-alias vpn="sudo openconnect --juniper vpn.student.gvsu.edu"
-alias code="open -a VScode"
-alias messenger="open -a Messenger"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export DEFAULT_USER="bidamin"
-export TERM="xterm-256color"
-export ZSH="/Users/bidamin/.oh-my-zsh"
-export PATH="$PATH:/optyarn-[1.15.2]/bin"
+# Path to your oh-my-zsh installation.
+  export ZSH="/home/bmo/.oh-my-zsh"
+  export TERM="rxvt-256color"
+# Alias' 
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#Setting icons
+ZSH_THEME="powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
 
 #Sets the icon for the home directory and unknown drectories. 
 POWERLEVEL9K_FOLDER_ICON="\uf07c"
 POWERLEVEL9K_HOME_SUB_ICON="\uf07c"
-POWERLEVEL9K_DIR_PATH_SEPARATOR=" > "
+POWERLEVEL9K_DIR_PATH_SEPARATOR="\u00BB "
+#POWERLEVEL9K_DIR_PATH_SEPARATOR="\ue0cc"
 POWERLEVEL9K_ETC_ICON="\uf07c"
 
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
-POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-POWERLEVEL9K_OS_ICON_FOREGROUND="cyan"
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-#Set the background color for specific segments
-POWERLEVEL9K_DIR_HOME_BACKGROUND="deeppink1"
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='deeppink1'
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND='deeppink1'
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-#VCS segment customization
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='48'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='202'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='229'
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND='black'
-POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND='yellow'
-POWERLEVEL9K_NVM_BACKGROUND="238"
-POWERLEVEL9K_NVM_FOREGROUND="red"
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="gray"
-POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND="015"
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-#Execution time
-POWERLEVEL9K_TIME_BACKGROUND='255'
-POWERLEVEL9K_COMMAND_TIME_FOREGROUND='yellow'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='245'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='red'
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
 
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon 
-				   root_indicator 
-				   context 
-				   dir
-				  #custom_css 
-				   vcs)
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-POWERLEVEL9K_CUSTOM_JAVASCRIPT="echo -n '\ue781' JavaScript"
-POWERLEVEL9K_CUSTOM_JAVASCRIPT_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_JAVASCRIPT_BACKGROUND="yellow"
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
 
-POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
-POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="green"
-
-POWERLEVEL9K_CUSTOM_JAVA="echo -n '\ue738' Java"
-POWERLEVEL9K_CUSTOM_JAVA_FOREGROUND="cyan"
-POWERLEVEL9K_CUSTOM_JAVA_BACKGROUND="white"
-
-POWERLEVEL9K_CUSTOM_C="echo -n '\ue738' C"
-POWERLEVEL9K_CUSTOM_C_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_C_BACKGROUND="red"
-
-POWERLEVEL9K_CUSTOM_SWIFT="echo -n '\ufbe3' Swift"
-POWERLEVEL9K_CUSTOM_SWIFT_FOREGROUND="white"
-POWERLEVEL9K_CUSTOM_SWIFT_BACKGROUND="058"
-
-POWERLEVEL9K_CUSTOM_CSS="echo -n '\ue749' CSS"
-POWERLEVEL9K_CUSTOM_CSS_FOREGROUND="white"
-POWERLEVEL9K_CUSTOM_CSS_BACKGROUND="purple"
-
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status 
-				    background_jobs 
-  				    command_execution_time 
-				    time )
-POWERLEVEL9K_SHOW_CHANGESET=true
-
-HYPHEN_INSENSITIVE="true"
-COMPLETION_WAITING_DOTS="true"
-ENABLE_CORRECTION="true"
-
-# /!\ zsh-syntax-highlighting and then zsh-autosuggestions must be at the end
-plugins=(gitfast colored-man command-not-found cp dirhistory zsh-autosuggestions zsh-syntax-highlightiting)
-
-# Runs the shell command
 source $ZSH/oh-my-zsh.sh
 
-#location of the zsh highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# User configuration
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+# export MANPATH="/usr/local/man:$MANPATH"
 
-ZSH_HIGHLIGHT_STYLES[alias]='fg=003,bold'
-ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green,bold'
-ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
-ZSH_HIGHLIGHT_STYLES[function]='fg=green,bold'
-ZSH_HIGHLIGHT_STYLES[command]='fg=198,bold'
-ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
-ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
+# You may need to manually set your language environment
+export LANG=en_US.utf8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Setting theme.r.
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme

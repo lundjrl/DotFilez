@@ -1,0 +1,34 @@
+!Sea Shells config
+*.color0:	#15344A
+*.color8:	#434C53
+
+*.color1:	#D15122
+*.color9:	#D48679
+
+*.color2:	#017C9B
+*.color10:	#628C98
+
+*.color3:	#FCA12F
+*.color11:	#FDD4A0
+
+*.color4:	#1D494F
+*.color12:	#19BDDD
+
+*.color5:	#68D4F1
+*.color13:	#BAE3EB
+
+*.color6:	#50A3B5
+*.color14:	#87ACB4
+
+*.color7:	#DDB88C
+*.color15:	#FEE3CD
+
+
+URxvt.background:       rgba:0000/0000/0000/dddd
+URxvt.foreground: 	#E47833
+URxvt*termName:		rxvt-256color
+URxvt.depth: 		32
+URxvt.scrollBar: 	false
+URxvt*fading: 		10
+URxvt.cursorColor: 	magenta
+URxvt.font: xft:RobotoMono\ Nerd\ Font:style=Regular:size=10
