@@ -31,4 +31,5 @@ URxvt.depth: 		32
 URxvt.scrollBar: 	false
 URxvt*fading: 		10
 URxvt.cursorColor: 	magenta
-URxvt.font: xft:RobotoMono\ Nerd\ Font:style=Regular:size=10
+URxvt.font: 		xft:Hack\ Nerd\ Font:style=Regular:size=13
+!URxvt.font: 		xft:RobotoMono\ Nerd\ Font:style=Regular:pixelsize=12
