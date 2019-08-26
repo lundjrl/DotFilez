@@ -1,3 +1,5 @@
+![Config image](https://github.com/lundjrl/DotFilez/blob/master/2019-08-22-175747_1920x1080_scrot.png)
+
 # ZSH
 ~
 Config file for my personal terminal setup. 
