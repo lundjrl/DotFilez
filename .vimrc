@@ -15,24 +15,33 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-"Plug 'gilgigilgil/anderson.vim'
+Plug 'w0rp/ale'
+Plug 'gilgigilgil/anderson.vim'
 call plug#end()
 
 "Key bindings
-map <C-n> :NERDTreeToggle<CR>
+map <C-x> :NERDTreeToggle<CR>
 
 "Fun stuff
 set number
-"colorscheme anderson
+syntax on
+colorscheme anderson
 
-"''''''Vim statusbar''''''"
-
-"Setting up the line
-set laststatus=2
-set statusline=
+"'''''Vim statusbar'''''"
 
 "Clearing complications
 set noruler
+
+"Indents
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set guifont="Envy Code R\18"
+"Security
+set secure
+"Setting up the line
+set laststatus=2
+set statusline=
 
 "Statusline config
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
