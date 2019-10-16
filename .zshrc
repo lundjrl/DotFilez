@@ -18,7 +18,9 @@ alias claer="clear"
 export DEFAULT_USER="bidamin"
 export TERM="xterm-256color"
 export ZSH="/Users/bidamin/.oh-my-zsh"
-#export PATH="$PATH:/optyarn-[1.15.2]/bin"
+export PATH="$PATH:/optyarn-[1.15.2]/bin"
+#React native path
+export PATH="/usr/local/Cellar/node/11.12.0/bin/:$PATH"
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
@@ -70,7 +72,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon
 				   root_indicator 
 				   context 
 				   dir
-				   custom_python
+				   lang_segment
 				   vcs)
 
 POWERLEVEL9K_CUSTOM_JAVASCRIPT="echo -n '\ue781' JavaScript"
@@ -126,3 +128,33 @@ ZSH_HIGHLIGHT_STYLES[function]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=198,bold'
 ZSH_HIGHLIGHT_STYLES[precommand]='fg=green,bold'
 ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=green,bold'
+
+prompt_lang_segment () {
+    # Looks up the folder path + name
+    dir="$( cd "$(dirname "$0")" ; pwd -P )"
+    # Checks if it is the desired language/framework folder, in this case, python
+    if [[ $dir == *"Python"* ]] ; then
+        content="\uf81f Python%f"
+       "$1_prompt_segment" "$0" "$2" "blue" "yellow" "$content" "#"
+    fi
+    if [[ $dir == *"JavaScript"* ]] ; then
+        content="\ue781 Javascript%f"
+        "$1_prompt_segment" "$0" "$2" "yellow" "black" "$content" "#"
+    fi
+    if [[ $dir == *"C"* ]] ; then
+	content="\ue61e C%f"
+	"$1_prompt_segment" "$0" "$2" "red" "black" "$content" "#"
+    fi
+    if [[ $dir == *"Java_code"* ]] ; then
+        content="\ue738 Java%f"
+        "$1_prompt_segment" "$0" "$2" "white" "cyan" "$content" "#"
+    fi
+    if [[ $dir == *"HTML"* ]] ; then
+        content="\ue60e HTML %f"
+        "$1_prompt_segment" "$0" "$2" "white" "purple" "$content" "#"
+    fi
+    if [[ $dir == *"Mobile"* ]] ; then
+        content="\ufbe3  Mobile \ue70e%f"
+        "$1_prompt_segment" "$0" "$2" "green" "white" "$content" "#"
+    fi
+}
