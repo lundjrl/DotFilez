@@ -1,0 +1,10 @@
+MENU="$(rofi -sep "|" -dmenu -i -p 'Games' -location 5 -xoffset -320 -yoffset -40 -width 10 -hide-scrollbar -line-padding 4 -padding 20 -lines 6 <<< "> Steam|> Discord|> Lutris|> WineCfg|> Pavucontrol|> Bluetooth")"
+            case "$MENU" in
+                *Steam) exec steam;;
+                *Discord) exec discord;;
+                *Lutris) exec lutris;;
+                *Nvidia) exec nvidia-settings ;;
+                *WineCfg) exec winecfg;;
+                *Pavucontrol) exec pavucontrol;;
+                *Bluetooth) exec bluetooth-manager;;
+            esac
