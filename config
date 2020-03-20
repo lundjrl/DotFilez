@@ -39,7 +39,7 @@ font pango: Hack Nerd Font Regular 13	# pango:roboto-bold 10
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Caps_Lock exec --no-startup-id urxvt
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
@@ -95,17 +95,17 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:&#xf489;"
-set $ws2 "2:&#xf269;"
-set $ws3 "3:&#xf6e2;"
-set $ws4 "4:&#xf8ad;"
-set $ws5 "5:&#xf8b0;"
-set $ws6 "6:&#xf8b3;"
-set $ws7 "7:&#xf8b6;"
-set $ws8 "8:&#xf8b9;"
-set $ws9 "9:&#xf8bc;"
-set $ws10 "X"
-
+#set $ws1 "1:&#xf489;"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -135,7 +135,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exit 
+bindsym $mod+Shift+e exit && exec killall back4.sh && exec feh --bg-fill -z ~/Pictures
 #"i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
@@ -167,23 +167,23 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-	position top
-	strip_workspace_numbers yes
-	status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-	font pango: Hack Nerd Font Regular 13
+#bar {
+#	position top
+#	strip_workspace_numbers yes
+#	status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+#	font pango: Hack Nerd Font Regular 13
 #nerdfont-complete 10
-	i3bar_command i3bar -t
-	tray_padding 0px
-	height 24
-	colors{
-		background #ff71ce
-		background #273238
-				   #border fill    internal
-		focused_workspace  #017c9B #FCA12F #017c9B
-		inactive_workspace #017c9B #017c9B #FCA12F	
-	}
-}
+#	i3bar_command i3bar -t
+#	tray_padding 0px
+#	height 24
+#	colors{
+#		background #ff71ce
+#		background #273238
+#				   #border fill    internal
+#		focused_workspace  #017c9B #FCA12F #017c9B
+#		inactive_workspace #017c9B #017c9B #FCA12F
+#	}
+#}
 
 #Gaps related things
 gaps inner 8
@@ -192,19 +192,34 @@ bindsym $mod+m gaps outer current minus 15
 bindsym $mod+Shift+m gaps outer current plus 15
 
 #Rounded borders
-for_window [class=".*"] border pixel 6
-border_radius 10
+for_window [class=".*"] border pixel 3 floating enable
+for_window [workspace="2"] border pixel 0 floating disable
+for_window [workspace=".*"] border pixel 3 floating enable
+border_radius 4
 client.unfocused	#FF000000 #FF000000 #FF000000 #FF000000 #FF000000 #FF000000
 client.focused		#FF000000 #FF000000 #FF000000 #FF000000 #FF000000 #FF000000
 
+workspace 2 output HDMI-0
+workspace 1 output DP-1
 #Screenshots
-#bindsym Print exec scrot
+bindsym Print exec scrot
 
-exec_always --no-startup-id feh --bg-fill -z ~/Pictures #/121415.jpg
+#exec_always --no-startup-id feh --bg-fill -z ~/Pictures #/121415.jpg
+
+#Auto config terminal colors based on background
+exec_always --no-startup-id wal -i ~/Pictures
+
+#Blur background on focused terminal
+exec --no-startup-id sh -c "~/wallblur/wallblur.sh &"
+#Animated wallpapers
+#exec_always --no-startup-id killall back4.sh
+#exec --no-startup-id $HOME/back4.sh 0.04 Pictures/gifs/pixel.gif
+
 exec --no-startup-id compton
-exec --no-startup-id i3-msg 'workspace $ws1; exec i3-sensible-terminal' 
+exec --no-startup-id i3-msg 'workspace $ws1; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/virtualbox'
-#exec --no-startup-id xautolock -time 5 -locker 'i3lock -d -c 000000'
-exec --no-startup-id i3-msg 'workspace $ws4; exec /home/bmo/snap/spotify'
-
+#exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/virtualbox'
+#exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/steam'
+#exec --no-startup-id i3-msg 'workspace $ws4; exec /usr/bin/code'
+#exec --no-startup-id sh -c "webstorm"
+exec --no-startup-id $HOME/.config/polybar/launch.sh
