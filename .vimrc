@@ -4,7 +4,8 @@
 "     \_/    |_| |_| |_| |_| |_|    \ __|	 
 "----------------------------------------
 
-"load package manager if not installed
+"""Load package manager if not installed"""
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -15,49 +16,44 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'w0rp/ale'
-Plug 'gilgigilgil/anderson.vim'
+Plug 'shougo/neocomplete.vim'
 call plug#end()
 
+""" End of plugin stuff """
+
+
 "Key bindings
-map <C-x> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 "Fun stuff
 set number
-syntax on
-colorscheme anderson
+set mouse=a
 
-"Python indenting
-au BufNewFile,BufRead *.py
-    \  set tabstop=4 |
-    \  set softtabstop=4 |
-    \  set shiftwidth=4 |
-    \  set textwidth=79 |
-    \  set expandtab |
-    \  set autoindent |
-    \  set fileformat=unix |
+set cursorline
+hi Cursorline term=bold cterm=bold ctermbg=darkred
 
-"Front-end Development
-au BufNewFile,BufRead *.js,*.html,*.css
-    \  set tabstop=2 |
-    \  set softtabstop=2 |
-    \  set shiftwidth=2 |
+"""Setting up autocomplete"""
 
-"'''''Vim statusbar'''''"
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+"Using smartcase
+let g:neocomplete#enable_smart_case = 1
 
-"Clearing complications
-set noruler
+"""  End of autocomplete  """
 
-"Indents
-"set tabstop=4
-"set shiftwidth=4
-"set expandtab
-"set guifont="Envy Code R\18"
-"Security
-set secure
+
+"filetype plugin on
+"filetype indent on
+
+
+""""""""Vim statusbar""""""""
+
 "Setting up the line
 set laststatus=2
 set statusline=
+
+"Clearing complications
+set noruler
 
 "Statusline config
 set statusline+=%#DiffAdd#%{(mode()=='n')?'\ \ NORMAL\ ':''}
@@ -80,3 +76,5 @@ set statusline+=%#CursorIM#     	  " colour
 set statusline+=\ %3l:%-2c\         	  " line + column
 set statusline+=%#Cursor#       	  " colour
 set statusline+=\ %3p%%\                  " percentage
+
+"""    End of statusbar    """
