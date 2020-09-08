@@ -3,7 +3,7 @@
 ## Add this to your wm startup file.
 
 # Terminate already running bar instances
-# killall -q polybar
+#killall -q polybar
 pkill -USR1 polybar
 
 # Wait until the processes have been shut down
