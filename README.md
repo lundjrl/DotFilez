@@ -1,4 +1,4 @@
-![Config image](https://github.com/lundjrl/DotFilez/blob/master/2020-02-12-132418_3000x1920_scrot.png)
+![Config image](https://github.com/lundjrl/DotFilez/blob/master/01232021i3config.png)
 
 # ZSH
 ~
