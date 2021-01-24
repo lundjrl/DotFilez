@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+  <menu id="apps-editors-menu" label="Development">
+    <item label="Code">
+      <action name="Execute">
+        <command>code</command>
+      </action>
+    </item>
+    <item label="Postman">
+      <action name="Execute">
+        <command>postman</command>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="apps-term-menu" label="Terminals">
+    <item label="Rxvt Unicode">
+      <action name="Execute">
+        <command>urxvt</command>
+      </action>
+    </item>
+    <item label="Alacritty">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </item>
+    <item label="Xterm">
+      <action name="Execute">
+        <command>xterm</command>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="apps-net-menu" label="Internet">
+    <item label="Firefox">
+      <action name="Execute">
+        <command>firefox</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+          <wmclass>Firefox</wmclass>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="apps-multimedia-menu" label="Multimedia">
+    <item label="Spotify">
+      <action name="Execute">
+        <command>spotify</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="OBS">
+      <action name="Execute">
+        <command>obs</command>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="apps-gaming-settings-menu" label="Gaming-Settings">
+    <item label="BlueTooth">
+      <action name="Execute">
+        <command>blueman-applet | blueman-manager </command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <!-- <item label="Nvidia">
+      <action name="Execute">
+        <command>nvidia-settings</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item> -->
+    <item label="Pavucontrol">
+      <action name="Execute">
+        <command>pavucontrol</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Nvidia-Settings">
+      <action name="Execute">
+        <command>nvidia-settings</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="WineConfig">
+      <action name="Execute">
+        <command>winecfg</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="apps-gaming-menu" label="Gaming">
+    <item label="Discord">
+      <action name="Execute">
+        <command>discord</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Steam">
+      <action name="Execute">
+        <command>steam</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Lutris">
+      <action name="Execute">
+        <command>lutris</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Minecraft">
+      <action name="Execute">
+        <command>minecraft-launcher</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="apps-fileman-menu" label="File Managers">
+    <item label="Thunar">
+      <action name="Execute">
+        <command>Thunar</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="FileLight">
+      <action name="Execute">
+        <command>filelight</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="BleachBit">
+      <action name="Execute">
+        <command>bleachbit</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="apps-graphics-menu" label="Graphics">
+    <item label="Gimp">
+      <action name="Execute">
+        <command>gimp</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+  </menu>
+
+  <menu id="system-menu" label="System">
+    <item label="Openbox Configuration Manager">
+      <action name="Execute">
+        <command>obconf</command>
+        <startupnotify>
+          <enabled>yes</enabled>
+        </startupnotify>
+      </action>
+    </item>
+    <item label="Manage Cups Printers">
+      <action name="Execute">
+        <command>xdg-open http://localhost:631/</command>
+        <startupnotify>
+          <enabled>no</enabled>
+          <icon>cups</icon>
+        </startupnotify>
+      </action>
+    </item>
+    <separator />
+    <item label="Reconfigure Openbox">
+      <action name="Reconfigure" />
+    </item>
+  </menu>
+
+  <menu id="root-menu" label="Openbox 3">
+    <separator label="Applications" />
+    <menu id="apps-editors-menu" />
+    <menu id="apps-graphics-menu" />
+    <menu id="apps-net-menu" />
+    <menu id="apps-multimedia-menu" />
+    <menu id="apps-term-menu" />
+    <menu id="apps-gaming-menu" />
+    <menu id="apps-gaming-settings-menu" />
+    <menu id="apps-fileman-menu" />
+    <separator label="System" />
+    <menu id="system-menu" />
+    <separator />
+    <item label="Log Out">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+    </item>
+    <item label="Sleep">
+      <action name="Sleep">
+        <command>systemctl suspend</command>
+      </action>
+    </item>
+    <item label="Reboot">
+      <action name="Execute">
+        <command>reboot</command>
+      </action>
+    </item>
+    <item label="Shut Down">
+      <action name="Execute">
+        <command>systemctl -i poweroff</command>
+      </action>
+    </item>
+  </menu>
+
+</openbox_menu>

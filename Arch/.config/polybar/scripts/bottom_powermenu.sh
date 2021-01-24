@@ -1,0 +1,1 @@
+/home/bmo/.config/rofi/scripts/powermenu.sh
