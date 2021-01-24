@@ -8,3 +8,6 @@
 - `zsh` - shell of choice with powerlevel10k.  
 - `arch` - lightweight, lean, durable OS.  
 -------------------------------------------  
+
+
+For rofi powermenu config, checkout [this](https://github.com/argosatcore/Deb_Dots), all credit goes to them.
