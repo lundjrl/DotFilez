@@ -1,0 +1,11 @@
+MENU="$(rofi -sep "|" -dmenu -i -p 'Games' -location 5 -xoffset -200 -yoffset -785 -width 10 -hide-scrollbar -theme-str '@import "/usr/share/rofi/themes/gruvbox-dark.rasi"' -line-padding 4 -padding 20 -lines 8 <<< "> Steam|> Discord|> Lutris|> Dolphin|> Nvidia|> WineCfg|> Pavucontrol|> Bluetooth")"
+            case "$MENU" in
+                *Steam) exec /usr/bin/steam &;;
+                *Discord) exec ~/Downloads/Discord/./Discord &;;
+                *Lutris) exec lutris &;;
+		        *Dolphin) exec dolphin-emu &;;
+                *Nvidia) exec nvidia-settings &;;
+                *WineCfg) exec winecfg &;;
+                *Pavucontrol) exec pavucontrol &;;
+                *Bluetooth) exec blueman-applet | blueman-manager &;;
+            esac

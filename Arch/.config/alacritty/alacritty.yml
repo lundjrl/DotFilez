@@ -1,0 +1,34 @@
+TERM: alacritty
+window:
+  padding:
+    x: 15
+    y: 15
+dynamic_padding: true
+decorations: full
+title: Alacritty
+class:
+  instance: Alacritty
+font:
+  normal:
+    family: Hack Nerd Font
+    style: Regular
+  bold:
+    family: Hack Nerd Font
+    style: Bold
+  italic:
+    family: Hack Nerd Font
+    style: Italic
+  bold_italic:
+    family: Hack Nerd Font
+    style: Bold Italic
+size: 13
+offset:
+  x: 0
+  y: 0
+background_opacity: 0.9
+window.dynamic_title: true
+hide_when_typing: true
+launcher:
+  program: xdg-open
+  args: []
+print_events: true
