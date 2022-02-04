@@ -1,0 +1,41 @@
+{
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.external.osxExec": "iTerm2.app",
+  "terminal.integrated.automationShell.osx": "/bin/zsh",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "files.associations": { "*.module": "php" },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "[php]": {
+    "editor.formatOnSave": true
+  },
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "python",
+    "rust",
+    "php",
+    "javascript",
+    "typescript"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 1
+}
