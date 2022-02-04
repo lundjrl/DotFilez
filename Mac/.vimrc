@@ -17,9 +17,7 @@ set nocompatible
 call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'w0rp/ale'
-"Plug 'gilgigilgil/anderson.vim'
 Plug 'sheerun/vim-polyglot'
-Plug 'pineapplegiant/spaceduck'
 Plug 'sheerun/vim-polyglot'
 Plug 'rust-lang/rust.vim'
 call plug#end()
@@ -30,7 +28,7 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-color spaceduck
+"color spaceduck
 
 "Key bindings
 map <C-x> :NERDTreeToggle<CR>
@@ -62,6 +60,10 @@ au BufNewFile,BufRead *.js,*.html,*.css
 
 "Clearing complications
 set noruler
+
+"Rust support
+syntax enable
+filetype plugin indent on
 
 "Indents
 "set tabstop=4
