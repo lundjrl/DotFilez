@@ -1,0 +1,176 @@
+{
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "javascript.preferences.quoteStyle": "single",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": false
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript, typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "terminal.external.osxExec": "iTerm2.app",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "files.associations": { "*.module": "php" },
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "python",
+    "rust",
+    "php",
+    "javascript",
+    "typescript"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "prettier.embeddedLanguageFormatting": "off",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": "400",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "settingsSync.ignoredSettings": [],
+  "window.zoomLevel": 2,
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.titleBarStyle": "native",
+  "redhat.telemetry.enabled": false,
+  "cSpell.languageSettings": [],
+  "cSpell.userWords": [
+    "Atmosic",
+    "codegen",
+    "creds",
+    "fullwidth",
+    "Keychain",
+    "nrwl",
+    "Pressable",
+    "pressables",
+    "Reactotron",
+    "springify",
+    "Swiper",
+    "Weezer"
+  ],
+  "search.exclude": {
+    "**/main.jsbundle": true,
+    "android/app/build/": true,
+    "ios/Pods": true,
+    "node_modules": true
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "editor.linkedEditing": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "commentAnchors.tags.anchors": {
+    "ANCHOR": {
+      "highlightColor": "#a6e3a1",
+      "scope": "file",
+      "backgroundColor": "rgb(166, 227, 161, 0.1)",
+      "styleMode": "comment",
+      "borderStyle": "1px solid rgb(166, 227, 161, 0.5)",
+      "borderRadius": 6,
+      "enabled": true
+    },
+    "INFO": {
+      "highlightColor": "#89dceb",
+      "scope": "workspace",
+      "backgroundColor": "rgb(137, 220, 235, 0.1)",
+      "styleMode": "comment",
+      "borderStyle": "1px solid rgb(137, 220, 235, 0.5)",
+      "borderRadius": 6,
+      "enabled": true
+    },
+    "TODO": {
+      "iconColor": "blue",
+      "highlightColor": "#f9e2af",
+      "scope": "workspace",
+      "backgroundColor": "rgb(249, 226, 175, 0.1)",
+      "styleMode": "comment",
+      "borderStyle": "1px solid rgb(249, 226, 175, 0.5)",
+      "borderRadius": 6,
+      "enabled": true
+    },
+    "FIXME": {
+      "iconColor": "red",
+      "highlightColor": "#eba0ac",
+      "scope": "workspace",
+      "backgroundColor": "rgb(235, 160, 172, 0.1)",
+      "styleMode": "comment",
+      "borderStyle": "1px solid rgb(235, 160, 172, 0.5)",
+      "borderRadius": 6,
+      "enabled": true
+    },
+    "STUB": {
+      "iconColor": "purple",
+      "highlightColor": "#b4befe",
+      "scope": "file",
+      "backgroundColor": "rgb(180, 190, 254, 0.1)",
+      "styleMode": "comment",
+      "borderStyle": "1px solid rgb(180, 190, 254, 0.5)",
+      "borderRadius": 6,
+      "enabled": true
+    },
+    "NOTE": {
+      "iconColor": "orange",
+      "highlightColor": "#f5e0dc",
+      "scope": "file",
+      "backgroundColor": "rgb(245, 224, 220, 0.1)",
+      "styleMode": "comment",
+      "borderStyle": "1px solid rgb(245, 224, 220, 0.5)",
+      "borderRadius": 6,
+      "enabled": true
+    },
+    "REVIEW": {
+      "iconColor": "green",
+      "highlightColor": "#fab387",
+      "scope": "workspace",
+      "backgroundColor": "rgb(250, 179, 135, 0.1)",
+      "styleMode": "comment",
+      "borderStyle": "1px solid rgb(250, 179, 135, 0.5)",
+      "borderRadius": 6,
+      "enabled": true
+    },
+    "SECTION": {
+      "iconColor": "blurple",
+      "highlightColor": "#896afc",
+      "scope": "workspace",
+      "behavior": "region"
+    },
+    "LINK": {
+      "iconColor": "#2ecc71",
+      "highlightColor": "#2ecc71",
+      "scope": "workspace",
+      "behavior": "link"
+    }
+  },
+  "json.schemas": [],
+  "security.workspace.trust.untrustedFiles": "open"
+}
