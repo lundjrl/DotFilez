@@ -19,9 +19,10 @@ brew install slack
 brew install --cask visual-studio-code
 
 # Install a few node versions for the different projects we'll be on
-nvm install 10.0.0
-nvm install 12.0.0
-nvm install 13.0.0
+nvm install 12
+nvm install 16
+nvm install 18
+nvm install 20
 
 # Install oh-my-zsh for a better terminal
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
