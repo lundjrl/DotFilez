@@ -4,3 +4,6 @@
     description: This hook copies your vscode config into the repo on commit.
     entry: scripts/sync-vscode.sh
     language: script
+    types:
+      - file
+      - text
