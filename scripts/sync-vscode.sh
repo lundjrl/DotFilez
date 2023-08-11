@@ -3,8 +3,7 @@
 if [[ ! -d "./Shared/vscode" ]]
 then
 	echo "File doesn't exist. Creating"
-	mkdir ./Shared
-	mkdir ./Shared/vscode
+	mkdir -p ./Shared/vscode
   echo "File created"
 fi
 
