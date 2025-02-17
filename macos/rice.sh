@@ -14,6 +14,7 @@ brew install btop node nvm python
 
 curl -fsSL https://bun.sh/install | bash
 
+curl -sS https://starship.rs/install.sh | sh
 
 # Copy over shared configs
 mkdir -p ~/.config
