@@ -5,7 +5,7 @@ Please run all scripts under the `./scripts` directory to get your local vscode 
 I tried setting this up with a pre-commit hook but it kinda violates git's process to add new files during the commit.
 
 ## Arch
-![Config image](https://github.com/lundjrl/DotFilez/blob/master/Arch/01232021i3config.png)
+![Config image](https://github.com/lundjrl/DotFilez/blob/master/arch-linux/01232021i3config.png)
 
 
 -------------------------------------------  
